@@ -118,7 +118,7 @@ class ComplexityComputerVisitor(ast.NodeVisitor):
         self.generic_visit(call_)
         
  
-list_of_files = ["C:\\Users\\grunb\\UniversityProjects\\Files\\fibonacci.py"]
+list_of_files = ["/Users/rumyanavaseva/Documents/ITU/AdvancedSE/Assignment2-Mirca/StructuralAnalysis/fibonacci.py"]
 
     
 complexity_visitor = ComplexityComputerVisitor()
@@ -129,4 +129,4 @@ for file_name in list_of_files:
     fanouts = complexity_visitor.compute_fanout(func_ast)
     
 for fun, fo in fanouts:
-    print(fun+", "+str(fo)) # MAKE A LIST of call names and print it
+    print(fun+" "+str(len(fo))+", "+str(fo)) # MAKE A LIST of call names and print it
